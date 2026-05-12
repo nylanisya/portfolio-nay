@@ -1,38 +1,33 @@
+import Navbar from "./components/navbar";
+import Hero from "./components/hero";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <div className="container">
-        {/* Bagian Perkenalan */}
-        <section id="hero">
-          <h1>Hai, Saya Nyla 🚀</h1>
-          <p>
-            Seorang Junior Web Developer yang sedang belajar React JS. Saya
-            senang membangun hal-hal yang bermanfaat di internet.
-          </p>
-        </section>
-
-        {/* Bagian Proyek */}
-        <section id="projects">
-          <h2>Proyek Saya</h2>
-          <div className="project-card">
-            <h3>Website Portofolio Pertama</h3>
-            <p>
-              Dibuat menggunakan React JS dan di-hosting melalui GitHub Pages.
-            </p>
-            <small>Teknologi: React, CSS, Git</small>
-          </div>
-          {/* Kamu bisa tambah project-card lain di sini nanti */}
-        </section>
-
-        {/* Bagian Kontak */}
-        <section id="contact">
-          <h2>Mari Terkoneksi</h2>
-          <p>Email: nyla@example.com</p>
-          <p>Instagram: @username_kamu</p>
-        </section>
+    <div className="creative-app">
+      {/* Background Decor */}
+      <div className="floating-shapes">
+        <div className="shape circle"></div>
+        <div className="shape heart">❤</div>
       </div>
+
+      <Navbar />
+
+      <main className="content-wrapper">
+        <Hero />
+
+        {/* Kamu bisa tambah Projects.js di sini nanti kalau sudah siap */}
+
+        <footer className="footer-girly">
+          <h3>Let's work together! 🌸</h3>
+          <p>naylaanisya12@gmail.com</p>
+          <div className="footer-links">
+            <a href="https://github.com/nylanisya">GitHub</a>
+            <span>•</span>
+            <a href="https://instagram.com/nyla_anisya">Instagram</a>
+          </div>
+        </footer>
+      </main>
     </div>
   );
 }
