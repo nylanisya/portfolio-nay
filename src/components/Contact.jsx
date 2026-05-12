@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import emailjs from "@emailjs/browser";
 
 const fadeLeft = {
   hidden: { opacity: 0, x: -40 },
@@ -13,14 +14,33 @@ const fadeRight = {
 };
 
 const Contact = () => {
+  const form = useRef();
   const [status, setStatus] = useState("");
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
-  const handleSubmit = (e) => {
+
+  const serviceID = "naylanay10"; // dari EmailJS (Service ID)
+  const templateID = "template_bmitu7e"; // dari EmailJS (Template ID)
+  const publicKey = "cSkMniFpqrprjvtSC"; // dari EmailJS (Public Key)
+  // ========================================
+
+  const sendEmail = (e) => {
     e.preventDefault();
-    setStatus("✨ Thanks! Your message has been sent.");
-    e.target.reset();
-    setTimeout(() => setStatus(""), 3000);
+    setStatus("Sending... 💌");
+
+    emailjs
+      .sendForm(serviceID, templateID, form.current, publicKey)
+      .then((result) => {
+        console.log("Success:", result.text);
+        setStatus("✨ Message sent! I’ll reply soon.");
+        form.current.reset();
+        setTimeout(() => setStatus(""), 4000);
+      })
+      .catch((error) => {
+        console.error("Error:", error.text);
+        setStatus("❌ Oops, something went wrong. Please try again.");
+        setTimeout(() => setStatus(""), 4000);
+      });
   };
 
   return (
@@ -32,13 +52,14 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="section-title">Contact Me</h2>
+          <h2 className="section-title">Get in Touch</h2>
           <p className="section-sub">
-            Have a question or want to collaborate? Just send a message.
+            Have a question or want to collaborate? Send me a message.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-10">
+          {/* Kiri: info ringkas */}
           <motion.div
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
@@ -55,38 +76,43 @@ const Contact = () => {
               <p className="text-gray-500 text-sm uppercase tracking-wide">
                 Location
               </p>
-              <p className="text-gray-800">Pekanbaru, Riau, Indonesia</p>
+              <p className="text-gray-800">Pekanbaru, Riau</p>
             </div>
             <div className="pt-4">
               <p className="text-gray-400 text-sm">
-                💬 Open for internships, freelance, or just a chat about admin &
-                IT.
+                💬 Open for internship, freelance, or just a chat about admin &
+                tech.
               </p>
             </div>
           </motion.div>
 
+          {/* Kanan: form kontak (dengan EmailJS) */}
           <motion.form
+            ref={form}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={fadeRight}
-            onSubmit={handleSubmit}
+            onSubmit={sendEmail}
             className="space-y-4"
           >
             <input
               type="text"
+              name="name"
               placeholder="Your name"
               required
               className="w-full px-5 py-3 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-pink-200 transition"
             />
             <input
               type="email"
+              name="email"
               placeholder="Your email"
               required
               className="w-full px-5 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-pink-200 transition"
             />
             <textarea
+              name="message"
               rows="4"
-              placeholder="Message"
+              placeholder="Your message"
               required
               className="w-full px-5 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-pink-200 transition"
             ></textarea>
