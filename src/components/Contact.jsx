@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import emailjs from "@emailjs/browser";
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 const fadeLeft = {
   hidden: { opacity: 0, x: -40 },
@@ -17,7 +18,6 @@ const Contact = () => {
   const form = useRef();
   const [status, setStatus] = useState("");
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
-
 
   const serviceID = "naylanay10"; // dari EmailJS (Service ID)
   const templateID = "template_bmitu7e"; // dari EmailJS (Template ID)
@@ -77,6 +77,33 @@ const Contact = () => {
                 Location
               </p>
               <p className="text-gray-800">Pekanbaru, Riau</p>
+            </div>
+            {/* Social Media Links */}
+            <div className="flex gap-4 text-2xl text-gray-600">
+              <a
+                href="https://id.linkedin.com/in/nayla-anisya-tagore-b9582b318"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-pink-500 transition"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://www.instagram.com/e.nayz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-pink-500 transition"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://github.com/nylanisya"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-pink-500 transition"
+              >
+                <FaGithub />
+              </a>
             </div>
             <div className="pt-4">
               <p className="text-gray-400 text-sm">

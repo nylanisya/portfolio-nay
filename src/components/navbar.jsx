@@ -6,7 +6,7 @@ const Navbar = () => {
 
   const menuItems = [
     { name: "About", href: "#about" },
-    { name: "Work", href: "#work" },
+    { name: "Certifications", href: "#work" }, // ← nama berubah, href tetap #work
     { name: "Contact", href: "#contact" },
   ];
 

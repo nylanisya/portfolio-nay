@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import fotoNaila from "../assets/foto-nayla.jpg";
 
 const Hero = () => {
   return (
@@ -9,20 +10,24 @@ const Hero = () => {
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="mb-8"
+          className="mb-6"
         >
-          <div className="w-24 h-24 mx-auto rounded-full bg-pink-100 flex items-center justify-center text-3xl shadow-sm">
-            🌸
-          </div>
+          <img
+            src={fotoNaila}
+            alt="Nayla Anisya Tagore"
+            className="w-32 h-32 mx-auto rounded-full object-cover object-[center_30%] shadow-sm border-2 border-pink-200 transition duration-300 hover:scale-105 hover:shadow-md"
+          />
         </motion.div>
+
         <motion.h1
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-5xl md:text-7xl font-semibold tracking-tight text-gray-900"
+          className="text-5xl md:text-6xl font-semibold tracking-tight text-gray-900 mt-3"
         >
           Hi, I'm <span className="text-pink-500">Nayla Anisya Tagore</span>
         </motion.h1>
+
         <motion.p
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -59,7 +64,7 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
             className="bg-gray-900 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-pink-500 transition"
           >
-            View Work
+            View Certifications
           </motion.a>
           <motion.a
             href="#contact"
