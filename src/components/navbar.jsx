@@ -6,7 +6,7 @@ const Navbar = () => {
 
   const menuItems = [
     { name: "About", href: "#about" },
-    { name: "Certifications", href: "#work" }, // ← nama berubah, href tetap #work
+    { name: "Certifications", href: "#work" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -16,11 +16,11 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo / Nama */}
-        <a href="#" className="text-xl font-semibold text-gray-800">
+        <a href="#home" className="text-xl font-semibold text-gray-800">
           nayla.
         </a>
 
-        {/* Desktop Menu (hidden di mobile) */}
+        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-gray-600">
           {menuItems.map((item) => (
             <li key={item.name}>
@@ -31,7 +31,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Tombol Hamburger (muncul hanya di mobile) */}
+        {/* Tombol Hamburger */}
         <button
           onClick={toggleMenu}
           className="md:hidden text-gray-700 text-2xl focus:outline-none"
@@ -41,7 +41,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu (drop-down) */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div

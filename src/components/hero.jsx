@@ -4,7 +4,10 @@ import fotoNaila from "../assets/foto-nayla.jpg";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-[#fffaf8] pt-20">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center bg-[#fffaf8] pt-20"
+    >
       <div className="text-center max-w-3xl px-6">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}

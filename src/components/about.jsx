@@ -9,7 +9,7 @@ import {
   FiMapPin,
   FiCheckCircle,
 } from "react-icons/fi";
-import { SiReact, SiTypescript, SiPhp, SiMysql } from "react-icons/si";
+import { SiReact, SiTypescript, SiPhp } from "react-icons/si";
 import {
   MdOutlineWorkOutline,
   MdOutlineSchool,
