@@ -1,21 +1,12 @@
+import project1Image from "../assets/project1.jpg";
+
 export const projects = [
   {
     id: 1,
-    title: "Pastel Dreams",
-    category: "illustration",
-    image: "/assets/project1.jpg",
+    title: "Rapor Bimbel Lorentz",
+    category: "web development",
+    image: project1Image,
+    link: "https://rapor-bimbel-lorentz.vercel.app/",
+    github: "https://github.com/nylanisya/rapor-bimbel-lorentz",
   },
-  {
-    id: 2,
-    title: "Brand identity - Bloom",
-    category: "branding",
-    image: "/assets/project2.jpg",
-  },
-  {
-    id: 3,
-    title: "Mobile App UI",
-    category: "design",
-    image: "/assets/project3.jpg",
-  },
-  // tambahkan 6–9 proyek lainnya
 ];
