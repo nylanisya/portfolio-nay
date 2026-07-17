@@ -60,7 +60,7 @@ const Gallery = () => {
           variants={fadeUp}
           className="text-center mb-16"
         >
-          <h2 className="section-title">📜 Certifications</h2>
+          <h2 className="section-title">Certifications</h2>
           <p className="section-sub">
             Official recognitions from my learning & professional journey.
           </p>

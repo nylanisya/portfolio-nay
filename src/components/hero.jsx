@@ -45,7 +45,7 @@ const Hero = () => {
           transition={{ delay: 0.35 }}
           className="text-gray-400 text-base mt-2 max-w-xl mx-auto"
         >
-          📍 Pekanbaru, Riau, Indonesia
+          Pekanbaru, Riau, Indonesia
         </motion.p>
         <motion.p
           initial={{ y: 20, opacity: 0 }}
@@ -53,7 +53,7 @@ const Hero = () => {
           transition={{ delay: 0.38 }}
           className="text-gray-500 text-sm mt-1 max-w-xl mx-auto"
         >
-          💼 Interests: Office Administration & IT Development
+          Interests: Office Administration & IT Development
         </motion.p>
         <motion.div
           initial={{ y: 20, opacity: 0 }}
