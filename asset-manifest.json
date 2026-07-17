@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio-nay/static/css/main.46c3981f.css",
-    "main.js": "/portfolio-nay/static/js/main.c13aac62.js",
+    "main.css": "/portfolio-nay/static/css/main.97e6c8ed.css",
+    "main.js": "/portfolio-nay/static/js/main.c6bc1cdc.js",
     "static/js/453.2ecd44ff.chunk.js": "/portfolio-nay/static/js/453.2ecd44ff.chunk.js",
     "static/media/osis-certificate.jpg": "/portfolio-nay/static/media/osis-certificate.387ab4cd5bbd0907d410.jpg",
     "static/media/pkl-certificate.jpg": "/portfolio-nay/static/media/pkl-certificate.efb5c4b6e03ed8d2956e.jpg",
     "static/media/rpl-certificate.jpg": "/portfolio-nay/static/media/rpl-certificate.7ecbf4b6efb15f3381a2.jpg",
+    "static/media/project1.jpg": "/portfolio-nay/static/media/project1.401d05ab60580e06adf7.jpg",
     "static/media/foto-nayla.jpg": "/portfolio-nay/static/media/foto-nayla.c2e5b501d2dc0bb0ae02.jpg",
     "index.html": "/portfolio-nay/index.html",
-    "main.46c3981f.css.map": "/portfolio-nay/static/css/main.46c3981f.css.map",
-    "main.c13aac62.js.map": "/portfolio-nay/static/js/main.c13aac62.js.map",
+    "main.97e6c8ed.css.map": "/portfolio-nay/static/css/main.97e6c8ed.css.map",
+    "main.c6bc1cdc.js.map": "/portfolio-nay/static/js/main.c6bc1cdc.js.map",
     "453.2ecd44ff.chunk.js.map": "/portfolio-nay/static/js/453.2ecd44ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.46c3981f.css",
-    "static/js/main.c13aac62.js"
+    "static/css/main.97e6c8ed.css",
+    "static/js/main.c6bc1cdc.js"
   ]
 }
